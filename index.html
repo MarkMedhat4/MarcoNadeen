@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marco Atif & Nadeen Assem — Wedding Invitation</title>
+<meta name="description" content="Join Marco Atif and Nadeen Assem as they celebrate their wedding on October 11, 2026 at El Qasr Hall.">
+<meta name="theme-color" content="#6E2B40">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Marco Atif & Nadeen Assem — Wedding Invitation">
+<meta property="og:description" content="October 11, 2026 · El Qasr Hall. With love, we invite you to celebrate with us.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/couple-night.jpg">
+
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/invitation.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#home">Skip to content</a>
+
+<!-- ============================================================
+     THE OPENING INVITATION — the photographed invitation itself is
+     the cover; the only animation is the center-opening reveal.
+     ============================================================ -->
+<div class="gate" id="gate">
+  <div class="gate__scene">
+
+    <div class="invitation-stage" id="invitation-stage">
+
+      <!-- Two clipped halves of the same photograph create the
+           center-opening "doors" effect. -->
+      <div class="invitation-cover invitation-cover--left" aria-hidden="true">
+        <img src="assets/images/invitation-cover.jpg" alt="" loading="eager">
+      </div>
+      <div class="invitation-cover invitation-cover--right" aria-hidden="true">
+        <img src="assets/images/invitation-cover.jpg" alt="" loading="eager">
+      </div>
+
+      <h1 class="sr-only">Marco Atif &amp; Nadeen Assem — October 11, 2026 — El Qasr Hall. With all our love, we invite you.</h1>
+
+      <button type="button" class="invitation-trigger" id="invitation-trigger" aria-label="Open wedding invitation"></button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header>
+  <nav class="site-nav" id="site-nav" aria-label="Primary">
+    <a class="site-nav__mark" href="#home" data-field="monogram">M &amp; N</a>
+    <ul class="site-nav__links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#couple">Couple</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#gallery">Memories</a></li>
+      <li><a href="#dress-code">Dress Code</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+    <button class="site-nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+  <div class="site-nav__mobile" id="nav-mobile">
+    <a href="#home">Home</a>
+    <a href="#couple">Couple</a>
+    <a href="#details">Details</a>
+    <a href="#venue">Venue</a>
+    <a href="#gallery">Memories</a>
+    <a href="#dress-code">Dress Code</a>
+    <a href="#rsvp">RSVP</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <p class="hero__monogram" data-field="monogram">M &amp; N</p>
+      <h2 class="hero__names">
+        <span data-field="groom">Marco Atif</span>
+        <em>&amp;</em>
+        <span data-field="bride">Nadeen Assem</span>
+      </h2>
+      <p class="hero__date" data-field="date">October 11, 2026</p>
+      <p class="hero__venue" data-field="venue">El Qasr Hall</p>
+      <a class="btn btn--ghost hero__cta" href="#details">View the Details</a>
+      <a class="hero__scroll" href="#couple">
+        Scroll
+        <svg viewBox="0 0 14 22" fill="none"><path d="M1 1l6 19 6-19" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THE COUPLE
+       ============================================================ -->
+  <section class="section section--ivory" id="couple">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow">Two families, one celebration</p>
+        <h2 class="section-title">The Couple</h2>
+        <hr class="rule rule--center">
+      </div>
+
+      <div class="couple__grid">
+        <div class="couple__person">
+          <div class="couple__frame">
+            <img src="assets/images/groom-solo.jpg" alt="Marco Atif, the groom" loading="lazy" width="960" height="1088">
+          </div>
+          <p class="couple__role">Groom</p>
+          <h3 class="couple__name" data-field="groom">Marco Atif</h3>
+        </div>
+        <div class="couple__person">
+          <div class="couple__frame">
+            <img src="assets/images/bride-solo.jpg" alt="Nadeen Assem, the bride" loading="lazy" width="960" height="1280">
+          </div>
+          <p class="couple__role">Bride</p>
+          <h3 class="couple__name" data-field="bride">Nadeen Assem</h3>
+        </div>
+      </div>
+
+      <div class="couple__together">
+        <img src="assets/images/couple-formal.jpg" alt="Marco and Nadeen together" loading="lazy" width="960" height="1280">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THE WEDDING DAY (ceremony + reception + countdown)
+       ============================================================ -->
+  <section class="section section--olive-wash" id="details">
+    <div class="container container--narrow">
+      <div class="section__head section__head--center">
+        <p class="eyebrow">Save the date</p>
+        <h2 class="section-title">The Wedding Day</h2>
+        <hr class="rule rule--center">
+        <p class="section-lede">We would be honored to have you join us as we begin our life together.</p>
+      </div>
+
+      <div class="details__grid">
+        <div class="detail-card">
+          <svg class="detail-card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.4 5.5L20 9l-4.4 3.8L17 19l-5-3.2L7 19l1.4-6.2L4 9l5.6-.5L12 3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <p class="detail-card__time" data-field="ceremonyTime">7:00 PM</p>
+          <p class="detail-card__label" data-field="ceremonyLabel">Church Ceremony</p>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.2"/></svg>
+          <p class="detail-card__time" data-field="receptionTime">8:00 PM</p>
+          <p class="detail-card__label" data-field="receptionLabel">Reception</p>
+          <p class="detail-card__place" data-field="venue">El Qasr Hall</p>
+        </div>
+      </div>
+
+      <div class="details__copy">
+        <button class="btn btn--ghost" id="copy-details" type="button">Copy Details</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE CELEBRATION (venue)
+       ============================================================ -->
+  <section class="section section--deep" id="venue">
+    <div class="container">
+      <div class="venue">
+        <div class="venue__media">
+          <img src="assets/images/couple-church.jpg" alt="Marco and Nadeen at the church" loading="lazy" width="854" height="1280">
+        </div>
+        <div class="venue__copy">
+          <p class="eyebrow">The celebration</p>
+          <h2 class="section-title" data-field="venue">El Qasr Hall</h2>
+          <hr class="rule">
+          <p class="section-lede">An evening of music, dancing, and joy — we can't wait to celebrate this new chapter surrounded by the people we love most.</p>
+          <a class="btn btn--olive" id="venue-directions" href="#" target="_blank" rel="noopener">View Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY
+       ============================================================ -->
+  <section class="section section--cream" id="gallery">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow">A few moments of our celebration</p>
+        <h2 class="section-title">Memories</h2>
+        <hr class="rule rule--center">
+      </div>
+
+      <div class="gallery">
+        <div class="gallery__item"><img src="assets/images/couple-formal.jpg" alt="Marco and Nadeen together, formal portrait" loading="lazy" width="960" height="1280"></div>
+        <div class="gallery__item"><img src="assets/images/couple-candid.jpg" alt="A candid, joyful moment between Marco and Nadeen" loading="lazy" width="854" height="1280"></div>
+        <div class="gallery__item"><img src="assets/images/couple-church.jpg" alt="Marco and Nadeen at the church" loading="lazy" width="854" height="1280"></div>
+        <div class="gallery__item"><img src="assets/images/couples.jpeg" alt="Nadeen by the water at night" loading="lazy" width="960" height="1280"></div>
+        <div class="gallery__item"><img src="assets/images/coupless.jpeg" alt="Marco, portrait" loading="lazy" width="960" height="1088"></div>
+        <div class="gallery__item"><img src="assets/images/couple-night.jpg" alt="Marco and Nadeen on the terrace at dusk" loading="lazy" width="854" height="1280"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WEDDING DRESS CODE
+       ============================================================ -->
+  <section class="section dress-code" id="dress-code">
+    <div class="container container--narrow">
+      <div class="section__head section__head--center">
+        <p class="eyebrow">Wedding dress code</p>
+        <h2 class="section-title">Dress to Impress</h2>
+        <hr class="rule rule--center">
+        <p class="section-lede">To celebrate our union, we request our guests dress to impress:</p>
+        <div class="gallery__item"><img src="assets/images/Dresscode.jpeg" alt="Marco, portrait" loading="lazy" width="960" height="1088"></div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       COUNTDOWN
+       ============================================================ -->
+  <section class="section section--deep section--tight" id="countdown-section">
+    <div class="container container--narrow">
+      <div class="section__head section__head--center">
+        <p class="eyebrow" data-field="date">October 11, 2026</p>
+        <h2 class="section-title">Counting Down to Forever</h2>
+      </div>
+      <div class="countdown" id="countdown">
+        <div class="countdown__grid" id="cd-grid" style="display:contents">
+          <div class="countdown__unit"><span class="countdown__value" id="cd-days">0</span><span class="countdown__label">Days</span></div>
+          <div class="countdown__unit"><span class="countdown__value" id="cd-hours">00</span><span class="countdown__label">Hours</span></div>
+          <div class="countdown__unit"><span class="countdown__value" id="cd-mins">00</span><span class="countdown__label">Minutes</span></div>
+          <div class="countdown__unit"><span class="countdown__value" id="cd-secs">00</span><span class="countdown__label">Seconds</span></div>
+        </div>
+        <p class="countdown__done" id="cd-done" hidden>The Day Has Arrived</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RSVP
+       ============================================================ -->
+  <section class="section section--ivory" id="rsvp">
+    <div class="container container--narrow">
+      <div class="rsvp">
+        <p class="eyebrow">Join us</p>
+        <h2 class="section-title">Will You Join Us?</h2>
+        <hr class="rule rule--center">
+        <div class="rsvp__card">
+          <p class="section-lede">We would be delighted to celebrate this beautiful day with you.</p>
+          <a class="btn btn--primary" id="whatsapp-rsvp" href="#" target="_blank" rel="noopener">Accept Invitation</a>
+          <a class="btn btn--ghost" id="whatsapp-decline" href="#" target="_blank" rel="noopener">Decline Invitation</a>
+          <p class="rsvp__deadline">You'll be able to review the message before sending.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CLOSING
+       ============================================================ -->
+  <section class="closing">
+    <p class="closing__monogram" data-field="monogram">M &amp; N</p>
+    <p class="closing__names"><span data-field="groom">Marco Atif</span> &amp; <span data-field="bride">Nadeen Assem</span></p>
+    <p class="closing__date" data-field="date">October 11, 2026</p>
+    <p class="closing__note">We can't wait to celebrate with you.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span data-field="year">2026</span> Marco &amp; Nadeen. Made with love.</p>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lightbox__close" id="lightbox-close" aria-label="Close photo viewer">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<!-- ============================================================
+     MUSIC CONTROL
+     ============================================================ -->
+<button class="music-toggle" id="music-toggle" aria-pressed="false" aria-label="Play background music">
+  <span class="music-toggle__ring" aria-hidden="true"></span>
+  <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+</button>
+
+<script src="js/data.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/main.js"></script>
+<script src="js/invitation.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/music.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/scroll-reveal.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* ============================================================
+   THE OPENING INVITATION
+   The photographed invitation is the cover art itself — no CSS/SVG
+   bow. The only animation is the center-opening reveal.
+   ============================================================ */
+
+.gate{
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1A0710 0%, #2A0A15 45%, #180509 100%);
+  transition: opacity 900ms var(--ease-silk), visibility 900ms var(--ease-silk);
+  padding: var(--gutter);
+  perspective: 1800px;
+}
+.gate--closed{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.gate__scene{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- The stage: sized to the photograph's own 2:3 portrait ratio ---- */
+.invitation-stage{
+  position: relative;
+  width: min(92vw, 460px);
+  aspect-ratio: 2 / 3;
+  transform-style: preserve-3d;
+  animation: cover-rise 900ms var(--ease-silk) both;
+}
+@keyframes cover-rise{
+  from{ opacity: 0; transform: translateY(18px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* ---- The cover photo, split into two clipped halves for the
+   center-opening "doors" effect. Both halves show the full image;
+   clip-path crops each to its own side, so together they read as
+   one seamless invitation until they part. ---- */
+.invitation-cover{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--shadow-card);
+  transition: transform 950ms var(--ease-silk), box-shadow 950ms var(--ease-silk);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.invitation-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.invitation-cover--left{
+  clip-path: inset(0 50% 0 0);
+  transform-origin: 50% 50%;
+}
+.invitation-cover--right{
+  clip-path: inset(0 0 0 50%);
+  transform-origin: 50% 50%;
+}
+
+.gate.is-card-open .invitation-cover--left{
+  transform: translateZ(10px) rotateY(-16deg) translateX(-2%);
+  box-shadow: 30px 25px 60px -25px rgba(20,12,10,0.55);
+}
+.gate.is-card-open .invitation-cover--right{
+  transform: translateZ(10px) rotateY(16deg) translateX(2%);
+  box-shadow: -30px 25px 60px -25px rgba(20,12,10,0.55);
+}
+.gate.gate--closed .invitation-cover{ transition: none; }
+
+/* ---- The invitation itself is the click target — no separate
+   "tap to open" affordance, no bow, just the invitation. ---- */
+.invitation-trigger{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: transform var(--dur-fast) var(--ease-silk);
+}
+.invitation-trigger:hover{ transform: scale(1.008); }
+.invitation-trigger:focus-visible{
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 6px;
+}
+
+@media (max-width: 420px){
+  .invitation-stage{ width: 94vw; }
+}
