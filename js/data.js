@@ -21,7 +21,7 @@ window.weddingData = {
 
   venue: "El Qasr Hall",
   // Leave empty ("") to hide the "View Location" button gracefully.
-  locationUrl: "https://maps.google.com/?q=El+Qasr+Hall",
+  locationUrl: "https://maps.app.goo.gl/9cKFK7KEmhV9C5VF6?g_st=iw",
 
   whatsappNumber: "201551553557",
   whatsappMessage:
