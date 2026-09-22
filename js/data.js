@@ -14,7 +14,7 @@ window.weddingData = {
   weddingDateDisplay: "October 11, 2026",
 
   ceremonyTime: "7:00 PM",
-  ceremonyLabel: "Church Ceremony",
+  ceremonyLabel: "St. George Church in Sohag",
 
   receptionTime: "8:00 PM",
   receptionLabel: "Reception",
