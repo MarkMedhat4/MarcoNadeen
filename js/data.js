@@ -23,11 +23,7 @@ window.weddingData = {
   // Leave empty ("") to hide the "View Location" button gracefully.
   locationUrl: "https://maps.app.goo.gl/9cKFK7KEmhV9C5VF6?g_st=iw",
 
-  whatsappNumber: "201551553557",
-  whatsappMessage:
-    "Hello Marco & Nadeen,\n\nCongratulations! ❤️\n\nI am delighted to accept your wedding invitation, and I look forward to celebrating this beautiful day with you.\n\nSee you on October 11, 2026.",
-  whatsappDeclineMessage:
-    "Hello Marco & Nadeen,\n\nThank you so much for the invitation. Unfortunately, I won't be able to attend the wedding.\n\nWishing you both a lifetime of happiness. ❤️",
+  
 
   musicPath: "assets/music/ambient.mp3",
 
